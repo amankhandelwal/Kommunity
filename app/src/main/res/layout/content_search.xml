@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    tools:context="com.when.threemb.kommunity.Search"
+    tools:showIn="@layout/activity_search">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/ll1">
+
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:singleLine="false"
+            android:hint="Search Community"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_search_black_24dp"
+
+            android:onClick="onSearchClicked" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll1"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:background="#994abc"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        map:cameraBearing="112.5"
+
+        map:cameraTilt="65"
+        map:cameraZoom="17"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ll1" />
+
+</RelativeLayout>

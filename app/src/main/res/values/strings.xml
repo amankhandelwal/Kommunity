@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kommunity</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_event">Event</string>
+</resources>
